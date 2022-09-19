@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?><Component xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" componentId="0c4ddf2c-c0c8-44b9-a9fe-e4153478ebe4" createdBy="msingh@deloitte.com.au" createdDate="2020-04-16T07:44:23Z" currentVersion="true" deleted="false" folderFullPath="Greater Western Water/03. API/04. Legacy APIs/02. DOMAIN (legacy)/document/v1/searchDocument/Unit Tests" folderId="Rjo0MjA4MzQ3" folderName="Unit Tests" modifiedBy="Surendran.Kalai@citywestwater.com.au" modifiedDate="2022-09-08T05:15:00Z" name="unit-test-post-sharepoint-search-document-v1" type="process" version="47">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <process allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="true" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="48.0" y="48.0">
+          <configuration>
+            <noaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape3" x="224.0" y="57.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="82.0" y="63.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="82.0" y="63.0"/>
+              <linesegment length="79" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="82.0" y="63.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="161.0" y="63.0"/>
+              <linesegment length="63" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="161.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape2" shapetype="message" userlabel="Set Search Message for search record exist " x="432.0" y="48.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{
+  "searchCriteria" : {
+    "operator" : "and",
+    "site" : "DAMS",
+    "searchParams" : [
+      {
+        "key" : "name",
+        "value" : "TestGEN_DAMS-22-000417.jpg"
+      }
+    ]
+  },
+  "response" : [
+    {
+      "field" : "OData__dlc_DocId"
+    },
+    {
+      "field" : "RecordNumber"
+    },
+    {
+      "field" : "Classification"
+    },
+    {
+      "field" : "Title"
+    },
+    {
+      "field" : "Author"
+    },
+    {
+      "field" : "Notes"
+    },
+    {
+      "field" : "RecordDisposition"
+    },
+    {
+      "field" : "Document_Type"
+    },
+    {
+      "field" : "CWWSourceSystem"
+    },
+    {
+      "field" : "DAMSDocumentID"
+    },
+    {
+      "field" : "DAMSDocumentLink"
+    },
+    {
+      "field" : "DAMSDocumentType"
+    },
+    {
+      "field" : "DAMSDocumentVersion"
+    },
+    {
+      "field" : "DAMSLocation"
+    },
+    {
+      "field" : "DocumentID"
+    },
+    {
+      "field" : "DocumentType"
+    },
+    {
+      "field" : "ServerRedirectedEmbedUri"
+    },
+    {
+      "field" : "Created"
+    }
+  ]
+} 
+'</msgTxt>
+              <msgParameters/>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape7" x="608.0" y="57.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="466.0" y="63.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="466.0" y="63.0"/>
+              <linesegment length="79" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="63.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="545.0" y="63.0"/>
+              <linesegment length="63" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="545.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="branch_icon" name="shape3" shapetype="branch" userlabel="" x="240.0" y="48.0">
+          <configuration>
+            <branch numBranches="2"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="1" name="shape3.dragpoint1" text="1" toShape="shape2" x="416.0" y="57.0">
+              <linesegment length="0" name="shape3.dragpoint1.lineseg1" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg2" orient="vertical" x="274.0" y="63.0"/>
+              <linesegment length="79" name="shape3.dragpoint1.lineseg3" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg4" orient="vertical" x="353.0" y="63.0"/>
+              <linesegment label="1" length="63" name="shape3.dragpoint1.lineseg5" orient="horizontal" x="353.0" y="63.0"/>
+            </dragpoint>
+            <dragpoint identifier="2" name="shape3.dragpoint2" text="2" toShape="unset" x="403.0" y="535.0">
+              <linesegment length="0" name="shape3.dragpoint2.lineseg1" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape3.dragpoint2.lineseg2" orient="vertical" x="274.0" y="63.0"/>
+              <linesegment length="72" name="shape3.dragpoint2.lineseg3" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="478" name="shape3.dragpoint2.lineseg4" orient="vertical" x="346.0" y="63.0"/>
+              <linesegment label="2" length="57" name="shape3.dragpoint2.lineseg5" orient="horizontal" x="346.0" y="541.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape4" shapetype="message" userlabel="Set Search Message for search record doesn't exist " x="432.0" y="528.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{
+   
+   "searchCriteria":{
+      "operator":"or",
+"site":"InformationStatements",
+      "searchParams":[
+         {
+            "key":"RecordNumber",
+            "value":"TEST-19-0001"
+         }
+      ]
+   },
+   "response":[
+      {
+         "field":"OData__dlc_DocId"
+      },
+      {
+         "field":"Classification"
+      },
+      {
+         "field":"RecordNumber"
+      },
+      {
+         "field":"Title"
+      },
+      {
+         "field":"Author"
+      },
+      {
+         "field":"Notes"
+      },
+      {
+         "field":"RecordDisposition"
+      },
+      {
+         "field":"Document_Type"
+      },
+      {
+         "field":"CWWSourceSystem"
+      },
+      {
+         "field":"DAMSDocumentID"
+      },
+      {
+         "field":"DAMSDocumentLink"
+      },
+      {
+         "field":"DAMSDocumentType"
+      },
+      {
+         "field":"DAMSDocumentVersion"
+      },
+      {
+         "field":"DAMSLocation"
+      },
+      {
+         "field":"DocumentID"
+      },
+      {
+         "field":"DocumentType"
+      }
+   ]
+}'</msgTxt>
+              <msgParameters/>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape4.dragpoint1" toShape="shape8" x="608.0" y="537.0">
+              <linesegment length="0" name="shape4.dragpoint1.lineseg1" orient="horizontal" x="466.0" y="543.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg2" orient="vertical" x="466.0" y="543.0"/>
+              <linesegment length="79" name="shape4.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="543.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg4" orient="vertical" x="545.0" y="543.0"/>
+              <linesegment length="63" name="shape4.dragpoint1.lineseg5" orient="horizontal" x="545.0" y="543.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="processcall_icon" name="shape7" shapetype="processcall" userlabel="" x="624.0" y="48.0">
+          <configuration>
+            <processcall abort="true" processId="7c36848a-8a9d-45c2-a7c4-58f45d1a2291" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape3" returnLabel=""/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape3" name="shape7.dragpoint1" toShape="shape17" x="800.0" y="57.0">
+              <linesegment length="0" name="shape7.dragpoint1.lineseg1" orient="horizontal" x="658.0" y="63.0"/>
+              <linesegment length="0" name="shape7.dragpoint1.lineseg2" orient="vertical" x="658.0" y="63.0"/>
+              <linesegment length="79" name="shape7.dragpoint1.lineseg3" orient="horizontal" x="658.0" y="63.0"/>
+              <linesegment length="0" name="shape7.dragpoint1.lineseg4" orient="vertical" x="737.0" y="63.0"/>
+              <linesegment length="63" name="shape7.dragpoint1.lineseg5" orient="horizontal" x="737.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="processcall_icon" name="shape8" shapetype="processcall" userlabel="" x="624.0" y="528.0">
+          <configuration>
+            <processcall abort="true" processId="7c36848a-8a9d-45c2-a7c4-58f45d1a2291" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape3" returnLabel=""/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape3" name="shape8.dragpoint1" toShape="shape16" x="800.0" y="537.0">
+              <linesegment length="0" name="shape8.dragpoint1.lineseg1" orient="horizontal" x="658.0" y="543.0"/>
+              <linesegment length="0" name="shape8.dragpoint1.lineseg2" orient="vertical" x="658.0" y="543.0"/>
+              <linesegment length="79" name="shape8.dragpoint1.lineseg3" orient="horizontal" x="658.0" y="543.0"/>
+              <linesegment length="0" name="shape8.dragpoint1.lineseg4" orient="vertical" x="737.0" y="543.0"/>
+              <linesegment length="63" name="shape8.dragpoint1.lineseg5" orient="horizontal" x="737.0" y="543.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="decision_icon" name="shape10" shapetype="decision" userlabel="200 Success" x="1392.0" y="48.0">
+          <configuration>
+            <decision comparison="equals" name="200 Success">
+              <decisionvalue valueType="track">
+                <trackparameter defaultValue="" propertyId="meta.base.applicationstatuscode" propertyName="Base - Application Status Code"/>
+              </decisionvalue>
+              <decisionvalue valueType="static">
+                <staticparameter staticproperty="200"/>
+              </decisionvalue>
+            </decision>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="true" name="shape10.dragpoint1" text="True" toShape="shape9" x="1568.0" y="57.0">
+              <linesegment length="0" name="shape10.dragpoint1.lineseg1" orient="horizontal" x="1426.0" y="63.0"/>
+              <linesegment length="0" name="shape10.dragpoint1.lineseg2" orient="vertical" x="1426.0" y="63.0"/>
+              <linesegment length="79" name="shape10.dragpoint1.lineseg3" orient="horizontal" x="1426.0" y="63.0"/>
+              <linesegment length="0" name="shape10.dragpoint1.lineseg4" orient="vertical" x="1505.0" y="63.0"/>
+              <linesegment label="True" length="63" name="shape10.dragpoint1.lineseg5" orient="horizontal" x="1505.0" y="63.0"/>
+            </dragpoint>
+            <dragpoint identifier="false" name="shape10.dragpoint2" text="False" toShape="shape11" x="1568.0" y="217.0">
+              <linesegment length="0" name="shape10.dragpoint2.lineseg1" orient="horizontal" x="1426.0" y="63.0"/>
+              <linesegment length="0" name="shape10.dragpoint2.lineseg2" orient="vertical" x="1426.0" y="63.0"/>
+              <linesegment length="79" name="shape10.dragpoint2.lineseg3" orient="horizontal" x="1426.0" y="63.0"/>
+              <linesegment length="160" name="shape10.dragpoint2.lineseg4" orient="vertical" x="1505.0" y="63.0"/>
+              <linesegment label="False" length="63" name="shape10.dragpoint2.lineseg5" orient="horizontal" x="1505.0" y="223.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape9" shapetype="stop" userlabel="" x="1584.0" y="48.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="exception_icon" name="shape11" shapetype="exception" userlabel="Unit test failed" x="1584.0" y="208.0">
+          <configuration>
+            <exception stopsingledoc="false" title="">
+              <exMessage>Unit test failed</exMessage>
+              <exParameters/>
+            </exception>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="stop_icon" name="shape16" shapetype="stop" userlabel="" x="816.0" y="528.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="processcall_icon" name="shape20" shapetype="processcall" userlabel="sub-logging-utility" x="1008.0" y="48.0">
+          <configuration>
+            <processcall abort="true" processId="b818ebcc-4515-41dc-a28a-586a39ade465" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape10" returnLabel=""/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape10" name="shape20.dragpoint1" toShape="shape21" x="1184.0" y="57.0">
+              <linesegment length="0" name="shape20.dragpoint1.lineseg1" orient="horizontal" x="1042.0" y="63.0"/>
+              <linesegment length="0" name="shape20.dragpoint1.lineseg2" orient="vertical" x="1042.0" y="63.0"/>
+              <linesegment length="79" name="shape20.dragpoint1.lineseg3" orient="horizontal" x="1042.0" y="63.0"/>
+              <linesegment length="0" name="shape20.dragpoint1.lineseg4" orient="vertical" x="1121.0" y="63.0"/>
+              <linesegment length="63" name="shape20.dragpoint1.lineseg5" orient="horizontal" x="1121.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="branch_icon" name="shape21" shapetype="branch" userlabel="" x="1200.0" y="48.0">
+          <configuration>
+            <branch numBranches="2"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="1" name="shape21.dragpoint1" text="1" toShape="shape10" x="1376.0" y="57.0">
+              <linesegment length="0" name="shape21.dragpoint1.lineseg1" orient="horizontal" x="1234.0" y="63.0"/>
+              <linesegment length="0" name="shape21.dragpoint1.lineseg2" orient="vertical" x="1234.0" y="63.0"/>
+              <linesegment length="79" name="shape21.dragpoint1.lineseg3" orient="horizontal" x="1234.0" y="63.0"/>
+              <linesegment length="0" name="shape21.dragpoint1.lineseg4" orient="vertical" x="1313.0" y="63.0"/>
+              <linesegment label="1" length="63" name="shape21.dragpoint1.lineseg5" orient="horizontal" x="1313.0" y="63.0"/>
+            </dragpoint>
+            <dragpoint identifier="2" name="shape21.dragpoint2" text="2" toShape="shape18" x="1376.0" y="377.0">
+              <linesegment length="0" name="shape21.dragpoint2.lineseg1" orient="horizontal" x="1234.0" y="63.0"/>
+              <linesegment length="0" name="shape21.dragpoint2.lineseg2" orient="vertical" x="1234.0" y="63.0"/>
+              <linesegment length="79" name="shape21.dragpoint2.lineseg3" orient="horizontal" x="1234.0" y="63.0"/>
+              <linesegment length="320" name="shape21.dragpoint2.lineseg4" orient="vertical" x="1313.0" y="63.0"/>
+              <linesegment label="2" length="63" name="shape21.dragpoint2.lineseg5" orient="horizontal" x="1313.0" y="383.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape22" shapetype="stop" userlabel="" x="1584.0" y="368.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="returndocuments_icon" name="shape19" shapetype="returndocuments" userlabel="" x="48.0" y="688.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="documentproperties_icon" name="shape17" shapetype="documentproperties" userlabel="Set Logging properties" x="816.0" y="48.0">
+          <configuration>
+            <documentproperties>
+              <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Process Property - PP-logUtilility - PP-x-category" persist="false" propertyId="definedprocess.eb3bc17c-0661-42dc-b5d0-61fd98d9019f@d49b4c79-7933-4fee-9c48-d2c7ee2a5aab" shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue key="11" valueType="static">
+                    <staticparameter staticproperty="api-document-v1_"/>
+                  </parametervalue>
+                  <parametervalue key="12" valueType="execution">
+                    <executionparameter executionproperty="Process Name"/>
+                  </parametervalue>
+                  <parametervalue key="13" valueType="static">
+                    <staticparameter staticproperty="_"/>
+                  </parametervalue>
+                  <parametervalue key="14" valueType="static">
+                    <staticparameter staticproperty="End"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+              <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Process Property - PP-logUtilility - PP-x-processName" persist="false" propertyId="definedprocess.eb3bc17c-0661-42dc-b5d0-61fd98d9019f@2e5beb0f-710d-4440-93f9-ba47adfd8f6d" shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue key="3" valueType="execution">
+                    <executionparameter executionproperty="Process Name"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape17.dragpoint1" toShape="shape20" x="992.0" y="57.0">
+              <linesegment length="0" name="shape17.dragpoint1.lineseg1" orient="horizontal" x="850.0" y="63.0"/>
+              <linesegment length="0" name="shape17.dragpoint1.lineseg2" orient="vertical" x="850.0" y="63.0"/>
+              <linesegment length="79" name="shape17.dragpoint1.lineseg3" orient="horizontal" x="850.0" y="63.0"/>
+              <linesegment length="0" name="shape17.dragpoint1.lineseg4" orient="vertical" x="929.0" y="63.0"/>
+              <linesegment length="63" name="shape17.dragpoint1.lineseg5" orient="horizontal" x="929.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="processcall_icon" name="shape18" shapetype="processcall" userlabel="" x="1392.0" y="368.0">
+          <configuration>
+            <processcall abort="true" processId="c6a6e571-17dd-45e7-80b9-97f7d71554a2" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape7" returnLabel=""/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape7" name="shape18.dragpoint1" toShape="shape22" x="1568.0" y="377.0">
+              <linesegment length="0" name="shape18.dragpoint1.lineseg1" orient="horizontal" x="1426.0" y="383.0"/>
+              <linesegment length="0" name="shape18.dragpoint1.lineseg2" orient="vertical" x="1426.0" y="383.0"/>
+              <linesegment length="79" name="shape18.dragpoint1.lineseg3" orient="horizontal" x="1426.0" y="383.0"/>
+              <linesegment length="0" name="shape18.dragpoint1.lineseg4" orient="vertical" x="1505.0" y="383.0"/>
+              <linesegment length="63" name="shape18.dragpoint1.lineseg5" orient="horizontal" x="1505.0" y="383.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides>
+    <Overrides>
+      <Connections>
+        <ConnectionOverride id="4bbf3aa5-38c7-4f0d-9912-c6191d841263">
+          <field id="queueComponentId" label="Queue Component ID" overrideable="false" xpath="QueueSettings/queueComponentId/text()"/>
+        </ConnectionOverride>
+        <ConnectionOverride id="bf9e2f11-3b7b-44d6-b2b4-bf7e6bc974d0">
+          <field id="url" label="URL" overrideable="true" xpath="HttpSettings/@url"/>
+          <field id="connectTimeout" label="Connect Timeout" overrideable="false" xpath="HttpSettings/@connectTimeout"/>
+          <field id="readTimeout" label="Read Timeout" overrideable="false" xpath="HttpSettings/@readTimeout"/>
+          <field id="useBasicAuth" label="Use Basic Authentication" overrideable="false" xpath="HttpSettings/@useBasicAuth"/>
+          <field id="user" label="User" overrideable="false" xpath="HttpSettings/AuthSettings/@user"/>
+          <field id="password" label="Password" overrideable="false" xpath="HttpSettings/AuthSettings/@password"/>
+          <field id="consumerKey" label="OAuth Consumer Key" overrideable="false" xpath="HttpSettings/OAuthSettings/@consumerKey"/>
+          <field id="accessToken" label="OAuth Access Token" overrideable="false" xpath="HttpSettings/OAuthSettings/@accessToken"/>
+          <field id="tokenSecret" label="OAuth Token Secret" overrideable="false" xpath="HttpSettings/OAuthSettings/@tokenSecret"/>
+          <field id="requestTokenURL" label="OAuth Request Token URL" overrideable="false" xpath="HttpSettings/OAuthSettings/@requestTokenURL"/>
+          <field id="authorizationURL" label="OAuth Authorization URL" overrideable="false" xpath="HttpSettings/OAuthSettings/@authorizationURL"/>
+          <field id="accessTokenURL" label="OAuth Access URL" overrideable="false" xpath="HttpSettings/OAuthSettings/@accessTokenURL"/>
+          <field id="consumerSecret" label="OAuth Consumer Secret" overrideable="false" xpath="HttpSettings/OAuthSettings/@consumerSecret"/>
+          <field id="realm" label="OAuth Realm" overrideable="false" xpath="HttpSettings/OAuthSettings/@realm"/>
+          <field id="signatureMethod" label="OAuth Signature Method" overrideable="false" xpath="HttpSettings/OAuthSettings/@signatureMethod"/>
+          <field id="clientauth" label="Use Client Authorization" overrideable="false" xpath="HttpSettings/SSLOptions/@clientauth"/>
+          <field id="clientsslalias" label="Client SSL Certificate" overrideable="false" xpath="HttpSettings/SSLOptions/@clientsslalias"/>
+          <field id="trustServerCert" label="Use Trusted SSL Certificate" overrideable="false" xpath="HttpSettings/SSLOptions/@trustServerCert"/>
+          <field id="trustedcertalias" label="Trust SSL Server Certificate" overrideable="false" xpath="HttpSettings/SSLOptions/@trustedcertalias"/>
+          <field id="clientId" label="OAuth2 Client ID" overrideable="false" xpath="HttpSettings/OAuth2Settings/credentials/@clientId"/>
+          <field id="clientSecret" label="OAuth2 Client Secret" overrideable="false" xpath="HttpSettings/OAuth2Settings/credentials/@clientSecret"/>
+          <field id="authTokenURL2" label="OAuth2 Authorization Token URL" overrideable="false" xpath="HttpSettings/OAuth2Settings/authorizationTokenEndpoint/@url"/>
+          <field id="accessTokenURL2" label="OAuth2 Access Token URL" overrideable="false" xpath="HttpSettings/OAuth2Settings/accessTokenEndpoint/@url"/>
+          <field id="scope" label="OAuth2 Scope" overrideable="false" xpath="HttpSettings/OAuth2Settings/scope"/>
+          <field id="accessToken2" label="OAuth2 Access Token" overrideable="false" xpath="HttpSettings/OAuth2Settings/credentials/@accessToken"/>
+          <field id="refreshAuthScheme" label="OAuth2 Refresh Authorization Scheme" overrideable="false" xpath="HttpSettings/OAuth2Settings/@refreshAuthScheme"/>
+          <field id="accessKeyId" label="Amazon AWS Access Key" overrideable="false" xpath="HttpSettings/AwsSettings/credentials/accessKeyId"/>
+          <field id="awsSecret" label="Amazon AWS Secret Key" overrideable="false" xpath="HttpSettings/AwsSettings/credentials/awsSecret"/>
+          <field id="awsRegion" label="Amazon AWS Region" overrideable="false" xpath="HttpSettings/AwsSettings/credentials/awsRegion"/>
+          <field id="customRegion" label="Custom Region" overrideable="false" xpath="HttpSettings/AwsSettings/credentials/customRegion"/>
+        </ConnectionOverride>
+      </Connections>
+      <PartnerOverrides/>
+      <Properties/>
+      <Extensions>
+        <ObjectDefinitions>
+          <unusedProfiles/>
+        </ObjectDefinitions>
+        <DataMaps>
+          <unusedMaps/>
+        </DataMaps>
+      </Extensions>
+      <CrossReferenceOverrides/>
+      <PGPOverrides/>
+      <DefinedProcessPropertyOverrides>
+        <OverrideableDefinedProcessPropertyComponent componentId="eb3bc17c-0661-42dc-b5d0-61fd98d9019f">
+          <OverrideableDefinedProcessPropertyValue key="d49b4c79-7933-4fee-9c48-d2c7ee2a5aab" name="PP-x-category" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="2cf684c4-a964-4707-acca-bbec41197d2b" name="PP-x-logLevel" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="2e5beb0f-710d-4440-93f9-ba47adfd8f6d" name="PP-x-processName" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="b1206dbb-0a92-4b30-ac89-c49e534e5a26" name="PP-x-transactionId" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="f56ef517-e7bb-4ddc-95e2-3a101f5ca8ee" name="PP-x-initialOperation" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="804a765d-dc3a-44b6-b32e-fbbf39c5be0a" name="PP-x-externalId" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="906211c5-6411-4a44-bfab-9b25b858d7d8" name="PP-x-source" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="e5307cba-27b9-4f16-920a-245cd6231309" name="PP-x-target" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="7944752b-8265-488a-91de-b9287dc104c6" name="PP-x-creationTime" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="11982948-c8e1-412d-a8f0-30fd85fa7e38" name="PP-x-sessionId" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="db6c99d5-ff61-4c0b-bd7f-c9f8755443b2" name="PP-x-application" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="d4336091-aaa6-4c7b-8fd3-e4cacd19b21f" name="PP-x-trackingId" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="fd5385f6-d298-47d8-93f8-916574221d5e" name="PP-x-environmentCode" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="31d9e02a-dd3f-4ca7-96ce-f52bae79c7f6" name="PP-x-atomName" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="bb8a8f46-3860-4903-a7d1-2da01bf63351" name="PP-x-documentSize" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="bf70eb9b-bb17-4836-ae0e-67936413ab7d" name="PP-x-executionTime" overrideable="false"/>
+          <OverrideableDefinedProcessPropertyValue key="50da1e57-934f-44a5-8aa6-5e5625d8f51a" name="PP-x-componentName" overrideable="false"/>
+        </OverrideableDefinedProcessPropertyComponent>
+      </DefinedProcessPropertyOverrides>
+    </Overrides>
+  </bns:processOverrides>
+</Component>
